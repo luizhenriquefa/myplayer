@@ -18,11 +18,19 @@ class Application:
 		self.pauseButton = Tkinter.Button(master, text=u'\u25B6' + "/" + u'\u23F8', command=self.changeButton)
 		self.pauseButton.pack()
 
+		self.addButton = Tkinter.Button(master, text="+", command=self.addMusic)
+		self.addButton.pack()
+
 	# Open music file
 	def openFile(self):
 		filename = tkFileDialog.askopenfile()
 		pygame.mixer.music.load(filename)
 		pygame.mixer.music.play()
+	
+	# Next music
+	def addMusic(self):
+		nextMusic = tkFileDialog.askopenfile()
+		pygame.mixer.music.queue(nextMusic)
 	
 	# Change button state (pause/unpause music)
 	def changeButton(self):
