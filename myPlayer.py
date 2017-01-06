@@ -1,6 +1,6 @@
 # Luiz Henrique de Freitas Almeida
 # 06/01/2017
-# My music player using python + pygame + tkinter
+# My simple music player using python + pygame + tkinter
 
 import Tkinter, tkFileDialog
 import pygame
